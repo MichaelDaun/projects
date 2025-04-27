@@ -1,0 +1,19 @@
+<header>
+  <div class="header-spacer">
+  </div>
+  <nav>
+      <a href="/snippets/browse">Browse</a>
+      <% if (username) { %>
+        <a href="/snippets/create">Create Snippet</a>
+        <a href="/user/settings">Settings</a>
+      <% } %>
+  </nav>
+  <% if (username) { %>
+      <nav class="logout-button-header">
+      <a href="/logout">Logout</a>
+      <% } else { %>
+      <nav class="login-button-header">
+      <a href="/login">Login</a>
+      <% } %>
+  </nav>
+</header>

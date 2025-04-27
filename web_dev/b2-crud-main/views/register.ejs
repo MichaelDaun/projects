@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Code Snippets</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body class="<%= backgroundClass %>">
+    <main class="<%= mainClass %>">
+      <div class="login-container">
+        <%- include('./partials/flashMessage', { message: message }) %>
+        <h2>Create Account</h2>
+        <form action="/login/register" method="POST">
+            <input type="text" name="username" placeholder="Choose a Username" required>
+            <input type="password" name="password" placeholder="Choose a Password" required>
+            <button type="submit" class="register-button">Create Account</button>
+        </form>
+
+        <form action="/login" method="GET">
+          <button type="submit" class="login-button">Back to Login</button>
+        </form>
+      </div>
+    </main>
+    <%- include('./partials/footer') -%>
+  </body>
+</html>

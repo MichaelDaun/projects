@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Code Snippets</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body class="<%= backgroundClass %>">
+    <%- include('./partials/header') -%>
+    <%- include('./partials/flashMessage', { message: message }) %>
+    <main class="<%= mainClass %>">
+      <div class="user-contributions">
+        <h1>Welcome <%= username %> !</h1>
+        <h2>Your Contributions</h2>
+        
+        <% if (snippets && snippets.length > 0) { %>
+          <% snippets.forEach((snippet) => { %>
+          <div class="snippet-card">
+          <span class="snippet-name"><%= snippet.title %></span>
+          <span class="snippet-lang"><%= snippet.language %></span>
+          <span class="snippet-tag"><%= snippet.tag1 %></span>
+          <span class="snippet-tag"><%= snippet.tag2 %></span>
+      
+          <div class="snippet-actions">
+            <form action="/snippets/edit" method="GET">
+              <input type="hidden" name="snippetID" value="<%= snippet._id %>">
+              <button type="submit" class="edit-button">Edit</button>
+            </form>
+            <form action="/snippets/delete" method="POST">
+              <input type="hidden" name="snippetID" value="<%= snippet._id %>">
+              <button type="submit" class="delete-button">Delete</button>
+            </form>
+          </div>
+        </div>
+        <% }) %>
+      <%} else { %>
+        <p> No Contributions Yet </p> 
+        <% } %>
+
+      </div>
+      </div>
+    </main>
+    <%- include('./partials/footer') -%>
+  </body>
+</html>

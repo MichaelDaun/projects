@@ -1,0 +1,114 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.desktop {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-bg-dark); /* keep if a img resource fails to load */
+}
+
+/* App bar styling */
+.app-bar {
+  min-height: 8%;
+  padding: 10px 20px;
+  background-color: rgba(26, 26, 64, 0.8); /* Semi-transparent dark background */
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: 10px auto; /* Center horizontally with some spacing */
+  border: 2px solid var(--color-accent-blue); /* Accent blue border */
+  border-radius: 15px; /* Rounded corners for retro look */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+}
+
+.activity-bar {
+  min-height: 8%;
+  padding: 10px 20px;
+  background-color: rgba(26, 26, 64, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+  width: fit-content;
+  margin: 10px auto; /* Center horizontally with some spacing */
+  border: 2px solid var(--color-accent-yellow); /* Yellow border */
+  border-radius: 15px; /* Rounded corners */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Icon container */
+.icons {
+  display: flex;
+  gap: 20px; /* Space between icons */
+}
+
+/* Icon button styling */
+.icon-button {
+  width: 60px;
+  height: 60px;
+  background-size: contain; /* Preserve aspect ratio for images */
+  background-repeat: no-repeat; /* No tiling */
+  background-position: center; /* Center the image */
+  border: 2px solid var(--color-text-light); /* Light border */
+  border-radius: 8px; /* Slight rounding for consistency */
+  transition: border-color 0.2s ease, transform 0.2s ease; /* Smooth interactions */
+  cursor: pointer;
+}
+
+/* Hover effect */
+.icon-button:hover {
+  border-color: var(--color-accent-pink); /* Highlight on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.icon-button:focus {
+  outline: 2px solid var(--color-accent-pink); /* Focus ring */
+}
+
+.activity-bar .icon-button {
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.activity-bar .icon-button:hover {
+  opacity: 1;
+  border-color: var(--color-accent-yellow);
+}
+
+.activity-bar .icon-button:focus {
+  border-color: var(--color-accent-yellow);
+  outline: none;
+}
+
+.bars-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.app-bar, .activity-bar {
+  margin: 5px;
+}
+
+.activity-bar:empty {
+  display: none;
+}
+
+.activity-bar:hover {
+  border-color: var(--color-accent-yellow);
+  box-shadow: 0 0 10px var(--color-accent-yellow);
+}
+
+.app-bar:hover {
+  border-color: var(--color-accent-blue); /* Highlight on hover */
+  box-shadow: 0 0 10px var(--color-accent-blue); /* Add a glow effect */
+}

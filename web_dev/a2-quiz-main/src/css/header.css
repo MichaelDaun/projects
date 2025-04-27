@@ -1,0 +1,89 @@
+header {
+  display: flex;
+  flex-direction: column;
+  border: solid, green, 10px;
+  border-radius: 30px;
+  width: 80%;
+  color: black;
+  background-color: white;
+  padding: 2%;
+  margin: 2%;
+
+}
+
+/* General header styling for the lights */
+header h1 {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Warm Christmas colors for letters */
+header h1 span:nth-child(1) { color: #cc0000; }
+header h1 span:nth-child(2) { color: #006400; }
+header h1 span:nth-child(3) { color: #00008b; }
+header h1 span:nth-child(4) { color: #b8860b; }
+header h1 span:nth-child(5) { color: #cc0000; }
+header h1 span:nth-child(6) { color: #006400; }
+header h1 span:nth-child(7) { color: #00008b; }
+header h1 span:nth-child(8) { color: #b8860b; }
+header h1 span:nth-child(9) { color: #cc0000; }
+header h1 span:nth-child(10) { color: #006400; }
+header h1 span:nth-child(11) { color: #00008b; }
+header h1 span:nth-child(12) { color: #b8860b; }
+header h1 span:nth-child(13) { color: #cc0000; }
+header h1 span:nth-child(14) { color: #006400; }
+
+/* Positioning the lights */
+.christmas-lights {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-bottom: 10px;
+}
+
+/* Light styles */
+.light {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  animation: blink 2s infinite ease-in-out;
+}
+
+/* Individual light colors */
+.light.red { background-color: red; animation-delay: 0s; }
+.light.green { background-color: green; animation-delay: 0.2s; }
+.light.blue { background-color: blue; animation-delay: 0.4s; }
+.light.yellow { background-color: yellow; animation-delay: 0.6s; }
+
+/* Blinking animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.2); }
+}
+
+@media (max-width: 600px) {
+  header {
+    width: 100%;
+    padding: 5%;
+    margin: 2%;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    gap: 1px;
+  }
+
+  .christmas-lights {
+    gap: 30px;
+  }
+
+  .light {
+    width: 10px;
+    height: 10px;
+  }
+}

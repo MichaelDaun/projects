@@ -1,0 +1,140 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Orbitron:wght@400;700&family=Press+Start+2P&display=swap');
+
+/* Root Variables for Fonts */
+:root {
+  --font-title: 'Monoton', cursive;
+  --font-body: 'Orbitron', sans-serif;
+  --font-game: 'Press Start 2P', cursive;
+
+  /* Color Scheme */
+  --color-bg-dark: #1a1a40;
+  --color-accent-pink: #ff6ec7;
+  --color-accent-blue: #4be1ec;
+  --color-accent-cyan: #00ffd5;
+  --color-accent-yellow: #f9f871;
+  --color-text-light: #d8d8d8;
+  --color-text-white: #f1f1f1;
+  --color-text-grey: #888;
+}
+
+/* Base Styles */
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-title);
+  color: var(--color-accent-pink);
+}
+
+p, span {
+  font-family: var(--font-body);
+  color: var(--color-text-light);
+}
+
+/* Buttons and UI Elements */
+button {
+  font-family: var(--font-body);
+  padding: 10px 15px;
+  border: 2px solid var(--color-accent-pink);
+  background-color: transparent;
+  color: var(--color-accent-yellow);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--color-accent-pink);
+  color: var(--color-text-white);
+}
+
+.game-text {
+  font-family: var(--font-game);
+  color: var(--color-accent-yellow);
+}
+
+.system-window {
+  display: flex; /* Enables Flexbox layout for window content */
+  flex-direction: column; /* Stacks header and content vertically */
+  position: absolute; /* Allows windows to be positioned freely on the desktop */
+  border: 1px solid var(--color-accent-blue);
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  min-height: 350px; /* Fixed height for testing */
+  min-width: 420px; /* Fixed width */
+  z-index: 100; /* Ensures windows are above other content */
+  transition: box-shadow 0.2s ease;
+}
+
+.system-window-content {
+  display: flex; /* Enable Flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Horizontally center items */
+  justify-content: space-evenly; /* Evenly distribute space between items */
+  flex: 1; /* Fill the remaining space below the header */
+  gap: 10px; /* Consistent spacing between child elements */
+  padding: 15px;
+}
+
+.system-window[data-focused="true"] {
+  /* highlight or glow style */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--color-accent-pink);
+}
+
+.system-input {
+  font-family: var(--font-body); /* Use the body font */
+  font-size: 0.9em; /* Slightly smaller font size */
+  color: var(--color-text-light); /* Light text color */
+  background-color: var(--color-bg-dark); /* Match the background theme */
+  border: 2px solid var(--color-accent-blue); /* Accent border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 8px 10px; /* Add padding for text */
+  outline: none; /* Remove default focus outline */
+  transition: border-color 0.2s ease, background-color 0.2s ease; /* Smooth transitions */
+}
+
+.system-input::placeholder {
+  color: var(--color-text-light); /* Match the input text color */
+  opacity: 0.7; /* Slightly faded for placeholders */
+}
+
+.system-input:focus {
+  border-color: var(--color-accent-pink); /* Keep the border highlight */
+  background-color: #223344; /* A darker, subtle shift from the default */
+  color: var(--color-text-light); /* Keep text light for contrast */
+  outline: none; /* Remove default browser focus outline */
+}
+
+/* new and fancy "data-attribute" */
+[data-moving="true"] {
+  opacity: 0.8;
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+}
+
+.system-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-top: 1px solid var(--color-accent-blue);
+  font-size: 0.85em;
+}
+
+.footer-time-date,
+.footer-version {
+  user-select: none;
+}
+
+.footer-resize-handle {
+  cursor: nwse-resize;
+  user-select: none;
+}

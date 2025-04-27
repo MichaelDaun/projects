@@ -1,0 +1,155 @@
+/* Memory title */
+.memory-title {
+  font-family: var(--font-game);
+  font-size: 1.5rem;
+  color: var(--color-accent-yellow);
+  text-align: center;
+}
+
+/* Grid options container */
+.grid-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px; /* Space between buttons */
+}
+
+/* Grid option buttons */
+.grid-option {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-light);
+  background-color: transparent;
+  border: 2px solid var(--color-accent-blue);
+  border-radius: 8px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Play button */
+.play-button {
+  font-family: var(--font-game);
+  font-size: 1rem;
+  padding: 10px 30px;
+  border: 2px solid var(--color-accent-pink);
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.grid-option:hover, .grid-option:focus, .play-button:hover, .play-button:focus {
+  background-color: var(--color-accent-pink);
+  color: var(--color-text-white);
+}
+
+.memory-grid {
+  display: flex;
+  flex-direction: column; /* Stack rows vertically */
+  gap: 10px; /* Space between rows */
+  padding: 20px;
+}
+
+.memory-row {
+  display: flex; /* Enable Flexbox for cards in a row */
+  justify-content: center; /* Center cards horizontally */
+  gap: 10px; /* Space between cards */
+}
+
+.memory-card {
+  all: unset; /* Reset default button styles */
+  min-width: 125px;
+  min-height: 125px;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--color-accent-blue);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for cards */
+.memory-card:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 4px 8px rgba(255, 110, 199, 0.3), 0 0 10px rgba(75, 225, 236, 0.5); /* Glow effect */
+}
+
+.memory-card:focus {
+  outline: 2px solid var(--color-accent-pink);
+  transform: scale(1.1);
+  border: none;
+}
+
+.memory-card[data-matched="true"] {
+  border-color: var(--color-accent-pink); /* Highlight matched cards */
+  opacity: 0.7; /* Dim matched cards */
+}
+
+/* Flipped card styling */
+.memory-card.flipped {
+  transform: rotateY(180deg); /* Placeholder for a flip effect */
+}
+
+/* Game Info Bar */
+.game-info-bar {
+  display: flex;
+  font-size: 1.5rem;
+}
+
+/* Clock Styling */
+.memory-clock {
+  color: var(--color-accent-pink); /* Highlighted color */
+}
+
+/* Score Styling */
+.memory-score {
+  color: var(--color-accent-yellow); /* Highlighted color */
+}
+
+.memory-attempts {
+  color: var(--color-accent-cyan)
+}
+
+/* Ensure consistent spacing */
+.memory-clock,
+.memory-score,
+.memory-attempts {
+  padding: 5px 10px; /* Add some internal spacing */
+}
+
+.game-over-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark translucent background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* Ensure it sits on top of the grid */
+  text-align: center;
+}
+
+.game-over-overlay h2 {
+  font-family: var(--font-game);
+}
+
+.restart-button {
+  font-family: var(--font-game);
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: 2px solid var(--color-accent-blue);
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.restart-button:hover, .restart-button:focus  {
+  background-color: var(--color-accent-pink);
+  color: var(--color-bg-dark);
+}

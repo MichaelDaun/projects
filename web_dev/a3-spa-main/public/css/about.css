@@ -1,0 +1,11 @@
+.about-container {
+  text-align: center;
+}
+
+.about-content {
+  line-height: 1.6;
+}
+
+.about-content h3 {
+  color: var(--color-accent-blue);
+}

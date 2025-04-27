@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Code Snippets</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body class="<%= backgroundClass %>">
+    <%- include('./partials/header') -%>
+    <main class="<%= mainClass %>">
+      <div class="snippet-container">
+        <%- include('./partials/flashMessage', { message: message }) %>
+        <h2>Create a New Code Snippet</h2>
+
+        <form action="/snippets/create" method="POST">
+          <div class="input-row">
+            <input type="text" name="title" placeholder="Snippet Title">
+            <input type="text" name="language" placeholder="Code lang e.g Java">
+            <input type="text" name="tag1" placeholder="Tag 1">
+            <input type="text" name="tag2" placeholder="Tag 2">
+          </div>
+
+            <textarea name="code" placeholder="Write your code here..."></textarea>
+
+            <div class="button-group">
+                <button type="submit" name="action" class="cancel-button" value="cancel">Cancel</button>
+                <button type="submit" name="action" class="submit-button" value="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    </main>
+    <%- include('./partials/footer') -%>
+  </body>
+</html>

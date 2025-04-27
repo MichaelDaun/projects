@@ -1,0 +1,75 @@
+.settings-screen {
+  width: 50%;
+  height: 60%;
+  overflow-y: auto;
+}
+
+.user-contributions {
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+.snippet-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.snippet-name {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.snippet-lang {
+  color: #00bfff;
+  font-weight: bold;
+}
+
+.snippet-tag {
+  color: orange;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.snippet-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-button {
+  background: #00bfff;
+  color: black;
+  border: 2px solid #00bfff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.edit-button:hover {
+  background: #008cff;
+  border-color: #008cff;
+  transform: scale(1.05);
+}
+
+.delete-button {
+  background: red;
+  color: black;
+  border: 2px solid red;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.delete-button:hover {
+  background: darkred;
+  border-color: darkred;
+  transform: scale(1.05);
+}

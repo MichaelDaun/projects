@@ -1,0 +1,37 @@
+.error-page {
+justify-content: center;
+background: #111;
+color: #ffffff;
+text-align: center;
+}
+
+.error-container {
+  background: rgb(147 0 0 / 90%);
+  padding: 40px;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.error-message {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.return-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+.return-button:hover {
+  background: darkgreen;
+  border-color: darkgreen;
+  color: white;
+}

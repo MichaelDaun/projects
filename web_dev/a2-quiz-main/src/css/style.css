@@ -1,0 +1,24 @@
+/**
+ * style.css
+ * 
+ * Purpose:
+ * - Contains all styles for the quiz game.
+ * - Ensures the game is visually simple, clear, and appealing.
+ * 
+ * Requirements:
+ * - The application should be comfortable for the user to understand and use.
+ * - The timer, score, and feedback messages should be styled appropriately.
+ */
+
+ /* Michael Daun */
+
+ @import url("base.css");
+ @import url("quiz-elements.css");
+ @import url("header.css");
+ @import url("error-messages.css");
+ @import url("game-over-state.css");
+ @import url('win-state.css');
+ @import url('choose-name-state.css');
+ @import url('game-info-panel.css');
+ @import url('answer-options.css');
+ @import url('highscores.css');

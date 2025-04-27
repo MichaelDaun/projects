@@ -1,0 +1,33 @@
+/* Title bar styling */
+.system-window-header {
+  display: flex;
+  flex-direction: row; /* Align title and buttons horizontally */
+  align-items: center; /* Vertically center children */
+  justify-content: space-between; /* Spread buttons and title */
+  border-bottom: 1px solid var(--color-accent-blue);
+  padding: 5px 10px; /* Adds some space inside the header */
+}
+
+
+.system-window-header-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex: 8;
+}
+
+.system-window-header-controls {
+  display: flex;
+  gap: 5px;
+  flex: 1;
+}
+
+.system-window-header-controls button {
+  width: 20px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 2px;
+}

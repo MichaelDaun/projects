@@ -1,0 +1,87 @@
+.login-screen,
+.register-screen {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.login-container {
+  background: rgba(20, 20, 20, 0.95);
+  padding: 30px;
+  color: white;
+  text-decoration: underline;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+  text-align: center;
+}
+
+.login-container input {
+  width: 94%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #00ff00;
+  border-radius: 5px;
+  background: #111;
+  color: white;
+  font-size: 16px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.login-button {
+  background: #00ff00;
+  color: black;
+  border: 2px solid #00ff00;
+}
+
+.login-button:hover {
+  background: #00cc00;
+  border-color: #00cc00;
+  transform: scale(1.02);
+}
+
+.login-button:active {
+  transform: scale(0.98);
+}
+
+.register-button {
+  background: red;
+  color: black;
+  border: 2px solid red;
+}
+
+.register-button:hover {
+  background: #cc0000;
+  border-color: #cc0000;
+  transform: scale(1.02);
+}
+
+.register-button:active {
+  transform: scale(0.98);
+}
+
+.continue-no-auth-button {
+  background: #00bfff;
+  color: black;
+  border: 2px solid #00bfff;
+}
+
+.continue-no-auth-button:hover {
+  background: #008cff;
+  border-color: #008cff;
+  transform: scale(1.05);
+}
+
+.continue-no-auth-button:active {
+  transform: scale(0.95);
+}

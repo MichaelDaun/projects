@@ -1,0 +1,48 @@
+/* ChatGPT again... */
+.choose-name-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #e9ecef; /* Light gray background */
+  color: #343a40; /* Dark text */
+  padding: 30px;
+  border: 2px solid #ced4da;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px #adb5bd; /* Subtle shadow effect */
+}
+
+.choose-name-message h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.choose-name-message p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.choose-name-message input {
+  font-size: 1rem;
+  padding: 10px;
+  width: 70%;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.choose-name-message button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.choose-name-message button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Code Snippets</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body class="<%= backgroundClass %>">
+    <%- include('./partials/header') -%>
+    <main class="<%= mainClass %>">
+      <div class="searchContainer">
+        <form action="/snippets/browse" method="GET">
+        <div class="input-row">
+          <input type="text" name="title" placeholder="Snippet Title">
+          <input type="text" name="language" placeholder="Code lang e.g Java">
+        </div>
+        <div class="input-row">
+          <input type="text" name="tag1" placeholder="Tag 1">
+          <input type="text" name="tag2" placeholder="Tag 2">
+        </div>
+        <button type="submit" class="search-button">SEARCH</button>
+      </form>
+        <div class="results-container">
+          <% if (searchResults && searchResults.length > 0) { %>
+            <% searchResults.forEach((snippet) => { %>
+              <div class="snippet-card" onclick="window.location.href='/snippets/browse?&selectedId=<%= snippet._id %>'">
+                <span class="snippet-name"><%= snippet.title %></span>
+                <span class="snippet-lang"><%= snippet.language %></span>
+                <span class="snippet-tag"><%= snippet.tag1 %></span>
+                <span class="snippet-tag"><%= snippet.tag2 %></span>
+              </div>
+              <% }) %>
+            <%} else { %>
+              <div class="no-results-container">
+                <p> No Search Results Found</p> 
+              </div>
+              <% } %>
+        </div>
+      </div>
+      <div class="view-container">
+        <% if (currentChosenCodeSnippet) { %>
+        <h2 class="snippet-title"><%= currentChosenCodeSnippet.title %></h2>
+        <pre class="code-block"><code><%= currentChosenCodeSnippet.code %></code></pre>
+        <%} else { %>
+          <div class="no-results-container">
+            <p> No Snippet To Display Yet</p> 
+          </div>
+          <% } %>
+      </div>
+    </main>
+    <%- include('./partials/footer') -%>
+  </body>
+</html>

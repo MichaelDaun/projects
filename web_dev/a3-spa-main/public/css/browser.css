@@ -1,0 +1,45 @@
+.browser {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.url-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 5px 5px;
+  border-bottom: 1px solid var(--color-accent-blue);
+}
+
+.url-bar button {
+  padding: 0px 4px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--color-text-white);
+  background-color: var(--color-accent-pink);
+  border: 2px solid var(--color-accent-pink);
+  border-radius: 6px;
+}
+
+.url-bar button:hover {
+  background-color: var(--color-accent-yellow);
+  border-color: var(--color-accent-yellow);
+  transform: scale(1.1);
+  color: var(--color-accent-blue);
+}
+
+.url-input {
+  flex: 1;
+  padding: 6px;
+  font-size: 1.2em;
+  border: 1px solid var(--color-accent-blue);
+  border-radius: 4px 0 0 4px;
+}
+
+.iframe {
+  flex: 1;
+  width: 100%;
+  border: none;
+}

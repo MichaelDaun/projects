@@ -1,0 +1,12 @@
+<% if (message) { %>
+  <div class="flash-message <%= message.type %>">
+    <%= message.text %>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      const flashMessage = document.getElementsByClassName('flash-message')[0];
+      flashMessage.remove();
+    }, 2000);
+  </script>
+<% } %>

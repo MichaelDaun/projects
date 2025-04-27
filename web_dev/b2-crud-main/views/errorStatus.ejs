@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Code Snippets</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="error-page">
+    <main class="error-container">
+        <h1>Error <%= statusCode %></h1>
+        <p class="error-message"><%= message %></p>
+        <% if (username) { %>
+          <a href="/user/settings" class="return-button">User Page</a>
+        <% } else { %>
+          <a href="/" class="return-button">Login Page</a>
+        <% } %>
+        
+    </main>
+</body>
+</html>
