@@ -13,8 +13,8 @@ Running npm start will start both the server and database.
 
   ``` bash
 
-  git clone git@gitlab.lnu.se:1dv528/student/md222fx/b2-crud.git
-  cd b2-crud
+  git clone git@github.com:MichaelDaun/projects.git
+  cd projects/web_dev/b2-crud-main
   ```
 
 2. **Install dependencies:**
@@ -33,4 +33,3 @@ This will:
 -	Start the MongoDB container  
 -	Launch the Express server  
 -	Make the app accessible at http://localhost:3000
-

@@ -10,8 +10,8 @@ A simple web scraping script that fetches data from a website and displays the o
 
   ``` bash
 
-  git clone git@gitlab.lnu.se:1dv528/student/md222fx/b1-scraper.git
-  cd b1-scraper 
+  git clone git@github.com:MichaelDaun/projects.git
+  cd projects/web_dev/b1-crud-main
   ```
 
 2. **Install dependencies:**

@@ -8,8 +8,8 @@ This SPA (Single Page Application) acts as a “Personal Web Desktop” where yo
 
   ``` bash
 
-  git clone git@gitlab.lnu.se:1dv528/student/md222fx/a3-spa.git
-  cd a3-spa 
+  git clone git@github.com:MichaelDaun/projects.git
+  cd projects/web_dev/a3-spa-main
   ```
 
 2. Install dependencies:

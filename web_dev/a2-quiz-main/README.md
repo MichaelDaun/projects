@@ -11,9 +11,8 @@ To get the application up and running, follow these steps:
 1. **Clone the repository**:
 
   ```bash
-  git clone git@gitlab.lnu.se:1dv528/student/md222fx/a2-quiz.git
-  
-  cd a2-quiz
+  git clone git@github.com:MichaelDaun/projects.git
+  cd projects/web_dev/a2-quiz-main
   ```
 
 2. **Install dependencies**:
